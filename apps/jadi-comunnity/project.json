@@ -16,7 +16,9 @@
         "inlineStyleLanguage": "scss",
         "assets": [
           "apps/jadi-comunnity/src/favicon.ico",
-          "apps/jadi-comunnity/src/assets"
+          "apps/jadi-comunnity/src/assets",
+          "apps/jadi-comunnity/src/.htaccess"
+
         ],
         "styles": ["apps/jadi-comunnity/src/styles.scss"],
         "scripts": []
