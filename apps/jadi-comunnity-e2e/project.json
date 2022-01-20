@@ -1,0 +1,28 @@
+{
+  "root": "apps/jadi-comunnity-e2e",
+  "sourceRoot": "apps/jadi-comunnity-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/jadi-comunnity-e2e/cypress.json",
+        "devServerTarget": "jadi-comunnity:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "jadi-comunnity:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/jadi-comunnity-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["jadi-comunnity"]
+}

@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "projects": {
+    "api": "apps/api",
+    "api-interfaces": "libs/api-interfaces",
+    "jadi-comunnity": "apps/jadi-comunnity",
+    "jadi-comunnity-e2e": "apps/jadi-comunnity-e2e"
+  }
+}

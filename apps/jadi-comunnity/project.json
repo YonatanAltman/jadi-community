@@ -1,0 +1,97 @@
+{
+  "projectType": "application",
+  "root": "apps/jadi-comunnity",
+  "sourceRoot": "apps/jadi-comunnity/src",
+  "prefix": "jadi-home",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/jadi-comunnity",
+        "index": "apps/jadi-comunnity/src/index.html",
+        "main": "apps/jadi-comunnity/src/main.ts",
+        "polyfills": "apps/jadi-comunnity/src/polyfills.ts",
+        "tsConfig": "apps/jadi-comunnity/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/jadi-comunnity/src/favicon.ico",
+          "apps/jadi-comunnity/src/assets"
+        ],
+        "styles": ["apps/jadi-comunnity/src/styles.scss"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/jadi-comunnity/src/environments/environment.ts",
+              "with": "apps/jadi-comunnity/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "jadi-comunnity:build:production"
+        },
+        "development": {
+          "browserTarget": "jadi-comunnity:build:development"
+        }
+      },
+      "defaultConfiguration": "development",
+      "options": {
+        "proxyConfig": "apps/jadi-comunnity/proxy.conf.json"
+      }
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "jadi-comunnity:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/jadi-comunnity/src/**/*.ts",
+          "apps/jadi-comunnity/src/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/jadi-comunnity"],
+      "options": {
+        "jestConfig": "apps/jadi-comunnity/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
