@@ -15,7 +15,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@jadi-home/api-interfaces": ["libs/api-interfaces/src/index.ts"]
+      "@jadi-home/api-interfaces": ["libs/api-interfaces/src/index.ts"],
+      "@jadi-home/shared/ui-shared-layout": [
+        "libs/shared/ui-shared-layout/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]
