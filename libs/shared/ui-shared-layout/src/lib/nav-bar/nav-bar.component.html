@@ -1,0 +1,13 @@
+<div class='wrapper'>
+  <div class="main">
+<div class="navs">
+  <div class="nav" *ngFor="let n of navs" routerLinkActive="active">
+    <a [routerLink]="n.link" >{{n.label}}</a>
+    <div class="line"></div>
+  </div>
+</div>
+  </div>
+  <div class='icon'>
+    <img src="./assets/logo/logo-white.svg" alt="Junior Angular Developer Israel">
+  </div>
+</div>

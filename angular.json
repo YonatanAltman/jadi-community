@@ -4,6 +4,42 @@
     "api": "apps/api",
     "api-interfaces": "libs/api-interfaces",
     "jadi-comunnity": "apps/jadi-comunnity",
-    "jadi-comunnity-e2e": "apps/jadi-comunnity-e2e"
+    "jadi-comunnity-e2e": "apps/jadi-comunnity-e2e",
+    "shared-ui-shared-layout": {
+      "projectType": "library",
+      "root": "libs/shared/ui-shared-layout",
+      "sourceRoot": "libs/shared/ui-shared-layout/src",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "prefix": "shared",
+      "targets": {
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/shared/ui-shared-layout"
+          ],
+          "options": {
+            "jestConfig": "libs/shared/ui-shared-layout/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/ui-shared-layout/src/**/*.ts",
+              "libs/shared/ui-shared-layout/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": [
+        "scope:shared",
+        "type:ui"
+      ]
+    }
   }
 }
