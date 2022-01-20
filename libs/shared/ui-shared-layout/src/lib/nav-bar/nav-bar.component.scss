@@ -1,0 +1,55 @@
+:host {
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    height: 90px;
+
+    .navs {
+      display: flex;
+      color: white;
+      column-gap: 32px;
+
+      .nav {
+        position: relative;
+        width: 100px;
+        a {
+          text-decoration: none;
+          color: white;
+          text-transform: uppercase;
+          font-size: xx-large;
+
+        }
+
+        .line {
+          background: white;
+          bottom: 1px;
+          height: 8px;
+          position: absolute;
+          width: 20px;
+          transition: all ease-in-out .2s;
+        }
+
+        &:hover{
+          .line{
+            background: yellow;
+          }
+        }
+        &.active{
+          .line {
+            width: 90px;
+          }
+        }
+
+      }
+    }
+
+    .icon {
+      img {
+        display: none;
+        height: 90px;
+        width: auto;
+      }
+    }
+  }
+}

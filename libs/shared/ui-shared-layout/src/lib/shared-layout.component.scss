@@ -1,0 +1,25 @@
+:host {
+  .wrapper {
+
+    height: 100vh;
+    position: relative;
+
+    .footer {
+      display: grid;
+      place-content: center;
+      width: 100%;
+      a {
+        font-size: 50px;
+        color: white;
+        text-decoration: none;
+        img{
+          height: 20px;
+          width: auto;
+        }
+      }
+
+      position: absolute;
+      bottom: 16px;
+    }
+  }
+}

@@ -9,11 +9,18 @@
       "projectType": "library",
       "root": "libs/shared/ui-shared-layout",
       "sourceRoot": "libs/shared/ui-shared-layout/src",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "prefix": "shared",
       "targets": {
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/shared/ui-shared-layout"],
+          "outputs": [
+            "coverage/libs/shared/ui-shared-layout"
+          ],
           "options": {
             "jestConfig": "libs/shared/ui-shared-layout/jest.config.js",
             "passWithNoTests": true
@@ -29,7 +36,10 @@
           }
         }
       },
-      "tags": ["scope:shared", "type:ui"]
+      "tags": [
+        "scope:shared",
+        "type:ui"
+      ]
     }
   }
 }

@@ -5,9 +5,11 @@ import { Message } from '@jadi-home/api-interfaces';
 @Component({
   selector: 'jadi-home-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  hello$ = this.http.get<Message>('/api/hello');
-  constructor(private http: HttpClient) {}
+  label = 'Junior Angular Developer Israel';
+
+  constructor(private http: HttpClient) {
+  }
 }
