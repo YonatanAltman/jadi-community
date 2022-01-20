@@ -6,7 +6,9 @@
     "ng": "nx",
     "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main",
     "start": "nx serve",
+    "start:land": "nx serve jadi-comunnity -o --port 8888",
     "build": "nx build",
+    "build:client-prod": "nx run jadi-comunnity:build:production",
     "test": "nx test"
   },
   "private": true,
