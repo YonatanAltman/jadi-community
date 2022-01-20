@@ -29,7 +29,7 @@ jobs:
       - name: Build Project
         run: npm run build:client-prod
 
-      - name: Sync Files
+      - name: Ftp upload
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
           server: ${{ env.SERVER }}
