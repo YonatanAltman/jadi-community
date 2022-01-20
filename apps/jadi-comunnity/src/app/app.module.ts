@@ -9,9 +9,10 @@ import { AppRoutingModule } from './router-app.module';
 import { HelloComponent } from './hello/hello.component';
 
 @NgModule({
-  declarations: [AppComponent,HelloComponent],
-  imports: [AppRoutingModule, BrowserModule, HttpClientModule, SharedUiSharedLayoutModule,  RouterModule.forRoot([])],
+  declarations: [AppComponent, HelloComponent],
+  imports: [AppRoutingModule, BrowserModule, HttpClientModule, SharedUiSharedLayoutModule, RouterModule.forRoot([])],
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule {
+}
