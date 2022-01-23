@@ -17,11 +17,21 @@
         "assets": [
           "apps/jadi-comunnity/src/favicon.ico",
           "apps/jadi-comunnity/src/assets",
-          "apps/jadi-comunnity/src/.htaccess"
+          "apps/jadi-comunnity/src/.htaccess",
+          {
+            "glob": "**/*",
+            "input":"./libs/shared-assets/",
+            "output":"./assets"
+          }
 
         ],
         "styles": ["apps/jadi-comunnity/src/styles.scss"],
-        "scripts": []
+        "scripts": [],
+        "stylePreprocessorOptions": {
+          "includePaths": [
+            "libs/shared-assets/styles"
+          ]
+        }
       },
       "configurations": {
         "production": {

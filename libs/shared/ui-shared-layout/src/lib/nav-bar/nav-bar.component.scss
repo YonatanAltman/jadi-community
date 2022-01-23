@@ -1,18 +1,22 @@
+@import "media";
+@import "mixin";
+
 :host {
   .wrapper {
     display: flex;
     justify-content: space-between;
-    padding: 16px;
+    padding: times8(2);
     height: 90px;
 
     .navs {
       display: flex;
       color: white;
-      column-gap: 32px;
+      column-gap: times8(3);
 
       .nav {
         position: relative;
-        width: 100px;
+        width: times8(12.5);
+
         a {
           text-decoration: none;
           color: white;
@@ -26,18 +30,19 @@
           bottom: 1px;
           height: 8px;
           position: absolute;
-          width: 20px;
+          width: times8(2.5);
           transition: all ease-in-out .2s;
         }
 
-        &:hover{
-          .line{
+        &:hover {
+          .line {
             background: yellow;
           }
         }
-        &.active{
+
+        &.active {
           .line {
-            width: 90px;
+            width: times8(11);
           }
         }
 
@@ -47,9 +52,32 @@
     .icon {
       img {
         display: none;
-        height: 90px;
+        height: times8(11);
         width: auto;
       }
     }
   }
+
+
+  @media (max-width: $bpoint-mobil) {
+    .wrapper {
+      .navs {
+        column-gap: times8(4);
+        .nav {
+          width: times8(4);
+
+          a {
+            font-size: x-large;
+          }
+          &.active {
+            .line {
+              width: times8(6);
+            }
+          }
+        }
+      }
+    }
+  }
 }
+
+

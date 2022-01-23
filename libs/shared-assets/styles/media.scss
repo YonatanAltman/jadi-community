@@ -1,0 +1,19 @@
+
+$bpoint-pc: 1440px;
+$bpoint-min-tablet: 770px;
+$bpoint-tablet-landscape: 1024px;
+$bpoint-tablet: 768px;
+/*Max For Mobiles: */
+$bpoint-mobil: 600px;
+
+/* Using SCSS variables to store breakpoints */
+
+@media (max-width: $bpoint-tablet) {
+}
+/* Using SCSS variables to store breakpoints */
+
+@media screen and (max-width: $bpoint-tablet-landscape) {
+}
+@media (max-width: $bpoint-mobil) {
+}
+
