@@ -1,3 +1,6 @@
+@import "media";
+@import "mixin";
+
 :host {
   .wrapper {
 
@@ -8,18 +11,34 @@
       display: grid;
       place-content: center;
       width: 100%;
+
       a {
         font-size: 50px;
         color: white;
         text-decoration: none;
-        img{
+
+        img {
           height: 20px;
           width: auto;
         }
       }
 
       position: absolute;
-      bottom: 16px;
+      bottom: times8(2);
+    }
+
+
+    @media (max-width: $bpoint-mobil) {
+
+      .footer {
+        a {
+          font-size: x-large;
+
+          img {
+            height: times8(2);
+          }
+        }
+      }
     }
   }
 }
