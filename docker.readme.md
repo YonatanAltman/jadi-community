@@ -10,4 +10,4 @@
 `docker run -d -p 9090:80 nginx:alpine`
 
 ###### Run angular inside the docker
-`docker run -d -p 4200:80 -v $(pwd):/usr/share/nginx/html nginx:alpine`
+`docker run -d -p 8200:80 -v $(pwd):/usr/share/nginx/html nginx:alpine`

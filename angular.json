@@ -9,7 +9,7 @@
       "projectType": "library",
       "root": "libs/shared/ui-shared-layout",
       "sourceRoot": "libs/shared/ui-shared-layout/src",
-      "schematics": {
+      "generators": {
         "@schematics/angular:component": {
           "style": "scss"
         }

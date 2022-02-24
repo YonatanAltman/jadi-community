@@ -6,7 +6,9 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/jadi-comunnity",
         "index": "apps/jadi-comunnity/src/index.html",
@@ -20,18 +22,22 @@
           "apps/jadi-comunnity/src/.htaccess",
           {
             "glob": "**/*",
-            "input":"./libs/shared-assets/",
-            "output":"./assets"
-          }
-
+            "input": "./libs/shared-assets/",
+            "output": "./assets"
+          },
+          "apps/jadi-comunnity/src/manifest.webmanifest"
         ],
-        "styles": ["apps/jadi-comunnity/src/styles.scss"],
+        "styles": [
+          "apps/jadi-comunnity/src/styles.scss"
+        ],
         "scripts": [],
         "stylePreprocessorOptions": {
           "includePaths": [
             "libs/shared-assets/styles"
           ]
-        }
+        },
+        "serviceWorker": true,
+        "ngswConfigPath": "apps/jadi-comunnity/ngsw-config.json"
       },
       "configurations": {
         "production": {
@@ -98,12 +104,16 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/jadi-comunnity"],
+      "outputs": [
+        "coverage/apps/jadi-comunnity"
+      ],
       "options": {
         "jestConfig": "apps/jadi-comunnity/jest.config.js",
         "passWithNoTests": true
       }
     }
   },
-  "tags": ["type:app"]
+  "tags": [
+    "type:app"
+  ]
 }

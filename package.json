@@ -9,6 +9,7 @@
     "start:land": "nx serve jadi-comunnity -o --port 8888",
     "build": "nx build",
     "build:client-prod": "nx run jadi-comunnity:build:production",
+    "build:docker": "nx run jadi-comunnity:build:production --watch",
     "test": "nx test"
   },
   "private": true,
@@ -21,6 +22,7 @@
     "@angular/platform-browser": "~13.1.0",
     "@angular/platform-browser-dynamic": "~13.1.0",
     "@angular/router": "~13.1.0",
+    "@angular/service-worker": "~13.1.0",
     "@nestjs/common": "^8.0.0",
     "@nestjs/core": "^8.0.0",
     "@nestjs/platform-express": "^8.0.0",
@@ -38,6 +40,7 @@
     "@angular/cli": "~13.1.0",
     "@angular/compiler-cli": "~13.1.0",
     "@angular/language-service": "~13.1.0",
+    "@angular/pwa": "^13.2.5",
     "@e-square/nx-ddd": "^1.2.0",
     "@nestjs/schematics": "^8.0.0",
     "@nestjs/testing": "^8.0.0",
